@@ -82,7 +82,7 @@ const speaker = (words, callback) => {
     newArr.push(callback(word));
   });
 
-  console.log(newArr);
+  // console.log(newArr);
   return newArr;
 };
 
@@ -105,12 +105,17 @@ Return the modified array.
 ------------------------------------------------------------------------------------------------ */
 
 const addValues = (arr, value) => {
-  // Solution code here...
+  arr.push(value);
 };
 
 const addNumbers = (num, arr, times, callback) => {
-  // Solution code here...
-};
+  for (let i = 0; i < times; i++) {
+    callback(arr, num);
+  }
+  return arr;
+}
+
+addNumbers(4, [1,2,3], 2, addValues);
 
 /* ------------------------------------------------------------------------------------------------
 
