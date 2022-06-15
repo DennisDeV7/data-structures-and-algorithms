@@ -83,14 +83,16 @@ const forEachTwoToThe = (arr) => {
   let newArr = [];
 
   arr.forEach(num => {
-    if (num < 0) {
-      let negpowNum = (1 / Math.pow(2, Math.abs(num)));
-      newArr.push(negpowNum);
-    } else {
-      let powNum = parseInt(Math.pow(2, num));
-      newArr.push(powNum);
-    }
-  })
+      newArr.push(Math.pow(2,num));
+  });
+  //   if (num < 0) {
+  //     let negpowNum = (1 / Math.pow(2, Math.abs(num)));
+  //     newArr.push(negpowNum);
+  //   } else {
+  //     let powNum = parseInt(Math.pow(2, num));
+  //     newArr.push(powNum);
+  //   }
+  // })
   return newArr;
 };
 
@@ -103,14 +105,16 @@ Write a function named mapTwoToThe that produces the same output as your forLoop
 ------------------------------------------------------------------------------------------------ */
 
 const mapTwoToThe = (arr) => {
-  let newArr = arr.map(function (num) {
-    if (num < 0) {
-     return (1 / Math.pow(2, Math.abs(num)));
-    } else {
-      return parseInt(Math.pow(2, num));
-    }
-  })
-  return newArr;
+
+  return arr.map((num) => Math.pow(2, num));
+  // let newArr = arr.map(function (num) {
+  //   if (num < 0) {
+  //    return (1 / Math.pow(2, Math.abs(num)));
+  //   } else {
+  //     return parseInt(Math.pow(2, num));
+  //   }
+  // })
+  // return newArr;
 };
 
 mapTwoToThe([1,2,3]);
