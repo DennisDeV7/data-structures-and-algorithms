@@ -80,8 +80,21 @@ Write a function named forEachTwoToThe that produces the same output as your for
 ------------------------------------------------------------------------------------------------ */
 
 const forEachTwoToThe = (arr) => {
-  // Solution code here...
+  let newArr = [];
+
+  arr.forEach(num => {
+    if (num < 0) {
+      let negpowNum = (1 / Math.pow(2, Math.abs(num)));
+      newArr.push(negpowNum);
+    } else {
+      let powNum = parseInt(Math.pow(2, num));
+      newArr.push(powNum);
+    }
+  })
+  return newArr;
 };
+
+forEachTwoToThe([1,2,3]);
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 6
@@ -90,8 +103,17 @@ Write a function named mapTwoToThe that produces the same output as your forLoop
 ------------------------------------------------------------------------------------------------ */
 
 const mapTwoToThe = (arr) => {
-  // Solution code here...
+  let newArr = arr.map(function (num) {
+    if (num < 0) {
+     return (1 / Math.pow(2, Math.abs(num)));
+    } else {
+      return parseInt(Math.pow(2, num));
+    }
+  })
+  return newArr;
 };
+
+mapTwoToThe([1,2,3]);
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 7 - Stretch Goal
