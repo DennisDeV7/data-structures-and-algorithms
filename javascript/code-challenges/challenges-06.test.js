@@ -62,11 +62,10 @@ console.log(a) prints [1, 2, 3, 1]
 ------------------------------------------------------------------------------------------------ */
 
 const appendFirstToLast = (arr) => {
-  let newArr = [...arr];
-  newArr.append(arr[0]);
+  arr.push(arr[0]);
 };
 
-appendFirstToLast([1, 2, 3, 4])
+
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 4
@@ -84,7 +83,7 @@ console.log(a) prints { fullName: 'Octavia Estelle Butler', yearBorn: 1947 }
 ------------------------------------------------------------------------------------------------ */
 
 const addBirthYearProperty = (obj, year) => {
-  // Solution code here...
+  obj.yearBorn = year;
 };
 
 /* ------------------------------------------------------------------------------------------------
