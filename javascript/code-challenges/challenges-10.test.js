@@ -30,14 +30,18 @@ For example:
 return: 23
 ------------------------------------------------------------------------------------------------ */
 const findMax = (matrix) => {
-  for (let i in matrix) {
-    let tempArray = [];
-    for (let j in matrix[i]){
-      tempArray += matrix[j][i];
-    }
-    let rowMax = rempArra
-  }
+  let rowMax = matrix.map(row => {
+    return Math.max.apply(Math, row);
+  })
+  let totalMax = Math.max.apply(null, rowMax);
+  return totalMax;
 };
+
+findMax([
+  [1, 3, 4, 5],
+  [4, 5, 6],
+  [23, 5, 5]
+]);
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 3
@@ -54,9 +58,20 @@ For example:
 return: 35
 ------------------------------------------------------------------------------------------------ */
 const totalSum = (matrix) => {
-  // Solution code here...
+  let sum = 0;
+    for( const row of matrix ) {
+      for( const cell of row ) {
+        sum += cell;
+      }
+    }
+    return sum;
 };
 
+totalSum([
+  [1, 3, 4, 5],
+  [4, 5, 1],
+  [2, 5, 5]
+]);
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 4
@@ -81,9 +96,18 @@ const alkiBeach = [33, 31, 147, 130, 27, 93, 38, 126, 141, 63, 46, 17];
 const cookieStores = [firstPike, seaTac, seattleCenter, capHill, alkiBeach];
 
 const grandTotal = (stores) => {
-  // Solution code here...
-
+  let hourTotal = [];
+  for (let i in hoursOpen) {
+    let columnTotal = 0;
+    for (let j in stores) {
+      columnTotal += stores[j][i];
+    }
+    hourTotal.push(columnTotal);
+  }
+  return hourTotal;
 };
+
+grandTotal(cookieStores);
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 5
