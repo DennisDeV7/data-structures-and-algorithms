@@ -116,7 +116,7 @@ Pat has decided that he would also like to organize his data as objects containi
 
 Here is sample data for the 9:00 sales: { sales: '88 cookies', time: '9 a.m.' }.
 
-Write a function named salesData that uses forEach to iterate over the hourlySales array and create an object for each hour. Return an array of the formatted data.
+Write a function named salesData that uses forEach to iterate over the hourlySales array and create an object for each hour. Return an array ofs the formatted data.
 ------------------------------------------------------------------------------------------------ */
 
 const salesData = (hours, data) => {
@@ -145,7 +145,7 @@ const errands = [
 ];
 
 const howManyTreats = (arr) => {
-  // Solution code here...
+  return arr[2].items[1].quantity;
 };
 
 /* ------------------------------------------------------------------------------------------------
