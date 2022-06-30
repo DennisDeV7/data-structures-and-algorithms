@@ -23,8 +23,11 @@ If the PIN is four numerical digits long, return true. Otherwise, return false.
 ------------------------------------------------------------------------------------------------ */
 
 const validatePin = (pin) => {
-  // Solution code here...
+  let regexPin = /\d{4}/;
+  return pin.test(regexPin)? true : false;
 };
+
+validatePin(1234);
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 3
