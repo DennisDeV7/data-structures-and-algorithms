@@ -25,3 +25,4 @@ To run your tests
 Code Challenges
 
 1. [Array Reverse](/python/code_challenges/array_reverse/README.md)
+2. [Array Insert Shift](/python//code_challenges/array_insert_shift/README.md)
