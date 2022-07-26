@@ -26,6 +26,7 @@ class LinkedList:
         LinkedList.string = ""
 
     def to_string(self):
+        LinkedList.string = ""
         current = self.head
         while current:
             LinkedList.string += str("{ " + f"{ current.value }" + " }")
@@ -46,6 +47,54 @@ class LinkedList:
             else:
                 current = current.next
         return False
+
+    def append(self, value):
+        new_node = Node(value)
+        if self.head is None:
+            self.head = new_node
+            return
+
+        last = self.head
+        while last.next:
+            last = last.next
+        last.next = new_node
+        LinkedList.string = ""
+
+    def insert_before(self, d_node, value):
+        new_node = Node(value)
+        current = self.head
+        if current is None:
+            print("No nodes")
+        else:
+            if current.value == d_node:
+                new_node.next = self.head
+                self.head = new_node
+
+            while current.next is not None:
+                if current.next.value == d_node:
+                    new_node.next = current.next
+                    current.next = new_node
+                    return
+                else:
+                    current = current.next
+        LinkedList.string = ""
+
+    def insert_after(self, target, value):
+        new_node = Node(value)
+        current = self.head
+        if target is None:
+            print("Not in list")
+            return
+        else:
+            while current:
+                if current.value == target:
+                    new_node.next = current.next
+                    current.next = new_node
+                    return
+                else:
+                    current = current.next
+        LinkedList.string = ""
+
 
 
 class Node:
@@ -75,4 +124,6 @@ if __name__ == "__main__":
     nums.insert("apple")
     print(nums)
     nums.insert("banana")
+    print(nums)
+    nums.insert_after("banana", "cucumber")
     print(nums)
