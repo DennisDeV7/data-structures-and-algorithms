@@ -17,3 +17,5 @@ script is run by running: `python data_structures/linked_list.py`
 from the python directory
 
 test is run by: `pytest-watch -c -- -k test_linked_list_kth.py`
+
+[Link to code](../../data_structures/linked_list.py)
