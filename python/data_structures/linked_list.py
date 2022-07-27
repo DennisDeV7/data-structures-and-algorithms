@@ -96,6 +96,22 @@ class LinkedList:
                     current = current.next
         LinkedList.string = ""
 
+    def kth_from_end(self, value):
+        current = self.head
+        length = 0
+        while current is not None:
+            current = current.next
+            length += 1
+
+        trav_length = length - value
+
+        while current is not None:
+            current = current.next
+            width = 0
+            width += 1
+            if width == trav_length:
+                return current.value
+
 
 
 class Node:
@@ -128,3 +144,5 @@ if __name__ == "__main__":
     print(nums)
     nums.insert_after("banana", "cucumber")
     print(nums)
+    number = nums.kth_from_end(0)
+    print(number)
