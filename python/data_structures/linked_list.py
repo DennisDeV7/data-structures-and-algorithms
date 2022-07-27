@@ -64,20 +64,21 @@ class LinkedList:
         new_node = Node(value)
         current = self.head
         if current is None:
-            print("No nodes")
-        else:
-            if current.value == d_node:
-                new_node.next = self.head
-                self.head = new_node
+            raise TargetError
 
-            while current.next is not None:
-                if current.next.value == d_node:
-                    new_node.next = current.next
-                    current.next = new_node
-                    return
-                else:
-                    current = current.next
+        if current.value == d_node:
+            new_node.next = self.head
+            self.head = new_node
+
+        while current.next is not None:
+            if current.next.value == d_node:
+                new_node.next = current.next
+                current.next = new_node
+                return
+            else:
+                current = current.next
         LinkedList.string = ""
+        raise TargetError
 
     def insert_after(self, target, value):
         new_node = Node(value)
@@ -114,7 +115,7 @@ class Node:
         declaration = f"{self.value}"
         return declaration
 
-class TargetError:
+class TargetError(Exception):
     pass
 
 
