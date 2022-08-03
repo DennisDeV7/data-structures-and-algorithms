@@ -17,4 +17,4 @@ Space: O(n): The space required will increase with the increasing size of the qu
 
 To run the test for stack_queue_pseudo.py run: `pytest-watch -c -- -k test_stack_queue_animal_shelter.py`
 
-The code does not yet work
+All tests should pass
