@@ -35,3 +35,4 @@ Code Challenges
 9. [Stack Queue Animal Shelter](python/docs/stack_queue_animal_shelter/README.md)
 10. [Stack Queue Brackets](python/docs/stack_queue_brackets/README.md)
 11. [Trees](python/docs/trees/README.md)
+12. [Tree Breadth First](python/docs/tree_breadth_first/README.md)
