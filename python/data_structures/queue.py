@@ -40,6 +40,8 @@ class Queue:
         # return the value
         old_front = self.front
         self.front = self.front.next_
+        if self.front is None:
+            self.rear = None
         return old_front.value
 
 class Node:

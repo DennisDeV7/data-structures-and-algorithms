@@ -19,4 +19,4 @@ Run the tests by running: `pytest-watch -c -- -k test_tree_breadth_first.py`
 
 [tests here](tests/code_challenges/test_tree_breadth_first.py)
 
-3 / 6 tests pass
+6 / 6 tests pass
