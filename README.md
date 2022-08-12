@@ -36,4 +36,6 @@ Code Challenges
 10. [Stack Queue Brackets](python/docs/stack_queue_brackets/README.md)
 11. [Trees](python/docs/trees/README.md)
 12. [Tree Breadth First](python/docs/tree_breadth_first/README.md)
-13. [Tree Fizz Buzz](python/docs/tree_fizz_buzz/README.md)
+13. [Tree Max](python/docs/tree_max/README.md)
+14. [Tree Fizz Buzz](python/docs/tree_fizz_buzz/README.md)
+
