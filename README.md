@@ -38,4 +38,5 @@ Code Challenges
 12. [Tree Breadth First](python/docs/tree_breadth_first/README.md)
 13. [Tree Max](python/docs/tree_max/README.md)
 14. [Tree Fizz Buzz](python/docs/tree_fizz_buzz/README.md)
+15. [Insertion Sort](python/code_challenges/insertion_sort/README.md)
 
