@@ -8,10 +8,8 @@ def merge_sort(nums):
     mid = n // 2
     left = nums[0:mid]
     right = nums[mid:n]
-
     merge_sort(left)
     merge_sort(right)
-
     merge(left, right, nums)
 
 
@@ -22,11 +20,9 @@ def merge(left, right, nums):
     if left[i] <= right[j]:
       nums[k] = left[i]
       i += 1
-
     else:
       nums[k] = right[j]
       j += 1
-
     k += 1
 
   if i == len(left):
