@@ -40,4 +40,4 @@ Code Challenges
 14. [Tree Max](python/docs/tree_max/README.md)
 15. [Insertion Sort](python/code_challenges/insertion_sort/README.md)
 16. [Merge Sort](sorting/merge/README.md)
-
+17. [Quick Sort](sorting/quick/README.md)
