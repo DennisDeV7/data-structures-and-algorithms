@@ -41,3 +41,4 @@ Code Challenges
 15. [Insertion Sort](python/code_challenges/insertion_sort/README.md)
 16. [Merge Sort](sorting/merge/README.md)
 17. [Quick Sort](sorting/quick/README.md)
+18. [Hashtable](python/docs/hashtable/README.md)
