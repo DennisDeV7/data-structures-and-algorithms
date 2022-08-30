@@ -63,9 +63,9 @@ def test_get():
 def test_get_deeper_item():
     table = Hashtable()
     table.set("eggs", "bacon")
-    table.set("ping", "pong")
+    table.set("gegs", "pong")
     table.set("mint", "oreos")
-    get_value = table.get("mint")
+    get_value = table.get("gegs")
     actual = get_value
-    expected = "oreos"
+    expected = "pong"
     assert actual == expected

@@ -10,16 +10,34 @@ class Hashtable:
         self.size = size
 
     def get(self, key):
-        for bucket in self.buckets:
-            key_value = self.contains(key)
-            if bucket:
-                if key_value:
-                    current = bucket.head
-                    while current:
-                        if key == current.value[0]:
-                            return current.value[1]
-                        current = current.next
+        # for bucket in self.buckets:
+        #     key_value = self.contains(key)
+        #     if bucket:
+        #         if key_value:
+        #             current = bucket.head
+        #             while current:
+        #                 if key == current.value[0]:
+        #                     return current.value[1]
+        #                 current = current.next
+        # return None
+        index = self.hash(key)
+        bucket = self.buckets[index]
+
+        if not bucket:
+            return None
+
+        current = bucket.head
+
+        while current:
+            pair = current.value
+            current_key = pair[0]
+            if current_key == key:
+                return pair[1]
+
+            current = current.next
+
         return None
+
 
     def set(self, key, value):
         index = self.hash(key)
