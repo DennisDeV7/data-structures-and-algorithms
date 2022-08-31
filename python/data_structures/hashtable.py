@@ -75,7 +75,7 @@ class Hashtable:
         return gathered_keys
 
     def hash(self, key):
-        ascii_values = [ord(char) for char in key]
+        ascii_values = [ord(char) for char in str(key)]
         ascii_sum = sum(ascii_values)
 
         primed = ascii_sum * 599

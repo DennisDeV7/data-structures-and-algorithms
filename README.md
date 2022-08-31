@@ -42,3 +42,5 @@ Code Challenges
 16. [Merge Sort](sorting/merge/README.md)
 17. [Quick Sort](sorting/quick/README.md)
 18. [Hashtable](python/docs/hashtable/README.md)
+19. [Hashtable Repeated Word](python/docs/hashtable_repeated_word/README.md)
+20. [Tree Intersection](python/docs/tree_intersection/README.md)
