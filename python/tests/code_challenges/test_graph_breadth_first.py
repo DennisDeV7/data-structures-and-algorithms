@@ -6,10 +6,10 @@ def test_exists():
     assert Graph
 
 
-@pytest.mark.skip("TODO")
+# @pytest.mark.skip("TODO")
 def test_bfs(graph):
     nodes = graph.get_nodes()
-    root = nodes[0]
+    root = list(nodes)[0]
     print(root.value)
     actual = graph.breadth_first(root)
     expected = ["Pandora", "Arendelle", "Metroville", "Monstropolis", "Narnia", "Naboo"]
