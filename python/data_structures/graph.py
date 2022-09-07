@@ -1,3 +1,5 @@
+from data_structures.queue import Queue
+
 class Graph:
     """
     Put docstring here
@@ -27,6 +29,26 @@ class Graph:
 
     def get_neighbors(self, vertex):
         return self.adjacency_list[vertex]
+
+    def breadth_first(self, vertex):
+        nodes = []
+        breadth = Queue()
+        visited = set()
+
+        breadth.enqueue(vertex)
+        visited.add(vertex)
+
+        while not breadth.is_empty():
+            front = breadth.dequeue()
+            nodes.append(front.value)
+
+            children = self.get_neighbors(front)
+
+            for child in children:
+                if child.vertex not in visited:
+                    visited.add(child.vertex)
+                    breadth.enqueue(child.vertex)
+        return nodes
 
 class Vertex:
     def __init__(self, value):

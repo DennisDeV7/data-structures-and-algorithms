@@ -23,3 +23,21 @@ def get_nodes(self): This method returns all of the values corresponding to the 
 def add_edge(self, start_vertex, end_vertex, weight=0): Creates an instance of the Edge class and adds a weight value to the edge between two nodes
 
 def get_neighbors(self, vertex): returns the value of nodes that correspond to a given vertex
+
+## Breadth First
+
+### Whiteboard
+
+![Challenge 36 Whiteboard](challenge36.jpg)
+
+### Efficiency
+
+Time: O(n) as the entire graph has to be iterated
+Through, the time will increase as the size of the graph increases
+
+Space: O(n) the function requires an additional list and set
+So the space increases with the increasing size of the graph
+
+[code](../../data_structures/graph.py)
+
+[test](../../tests/code_challenges/test_graph_breadth_first.py)
