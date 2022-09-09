@@ -1,4 +1,5 @@
 from data_structures.queue import Queue
+from data_structures.stack import Stack
 
 class Graph:
     """
@@ -48,6 +49,26 @@ class Graph:
                 if child.vertex not in visited:
                     visited.add(child.vertex)
                     breadth.enqueue(child.vertex)
+        return nodes
+
+    def depth_first_search(self, vertex):
+        nodes = []
+        visited = set()
+        height = Stack()
+
+        height.push(vertex)
+        visited.add(vertex)
+
+        while not height.is_empty():
+            top = height.pop()
+            nodes.append(top.value)
+
+            neighbors = self.get_neighbors(top)
+
+            for neighbor in neighbors:
+                if neighbor.vertex not in visited:
+                    visited.add(neighbor.vertex)
+                    height.push(neighbor.vertex)
         return nodes
 
 class Vertex:
